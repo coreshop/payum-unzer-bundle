@@ -1,0 +1,7 @@
+unzer_payment_type: 'Zahlungsart'
+unzer_payment_type_card: 'Kredit- / Debitkarte'
+unzer_payment_type_paypal: 'PayPal'
+unzer_payment_type_sofort: 'Sofort (von Unzer abgekündigt)'
+unzer_public_key: 'Public Key'
+unzer_private_key: 'Private Key'
+unzer_sandbox_mode: 'Sandbox-Modus'

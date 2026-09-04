@@ -1,51 +1,64 @@
 {
     "name": "coreshop/payum-unzer-bundle",
     "type": "pimcore-bundle",
-    "description": "CoreShop - Unzer Bundle",
+    "description": "CoreShop - Unzer Payment Bundle",
     "keywords": [
         "coreshop",
         "pimcore",
         "ecommerce",
+        "payment",
         "unzer",
-        "heidelpay"
+        "payum"
     ],
-    "homepage": "http://www.coreshop.org",
-    "license": "GPL-3.0-or-later",
+    "homepage": "https://www.coreshop.com",
+    "license": "proprietary",
     "authors": [
         {
-            "name": "Dominik Pfaffenbauer",
-            "email": "dominik@pfaffenbauer.at",
-            "homepage": "https://www.pfaffenbauer.at/",
-            "role": "Developer"
-        },
-        {
-            "name": "Albert Mueller",
-            "homepage": "https://www.dgtls.com/",
-            "role": "Developer"
+            "name": "CoreShop GmbH",
+            "email": "info@coreshop.com",
+            "homepage": "https://www.coreshop.com/",
+            "role": "TEAM"
         }
     ],
     "require": {
-        "php": ">=7.1",
-        "coreshop/payum-bundle": "^2.0 | ^3.0",
-        "coreshop/payum-unzer": "^2.0",
-        "moneyphp/money": "^3.2"
+        "php": "^8.3",
+        "coreshop/core-shop": "^5.1",
+        "coreshop/enterprise-subscription-bundle": "^2025.1",
+        "coreshop/payum-unzer": "3.x-dev"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-master"
+        "coreshop/test-setup": "1.0.x-dev",
+        "pimcore/admin-ui-classic-bundle": "^2.0",
+        "pimcore/studio-ui-bundle": "^2025.4",
+        "symfony/runtime": "^6.4 || ^7.0"
+    },
+    "suggest": {
+        "pimcore/admin-ui-classic-bundle": "^2.0 - Pimcore classic admin (ExtJS)",
+        "pimcore/studio-ui-bundle": "^2025.4 - Pimcore Studio, the admin UI"
     },
     "config": {
-        "bin-dir": "bin"
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "symfony/runtime": true
+        }
     },
     "autoload": {
         "psr-4": {
-            "CoreShop\\Payum\\UnzerBundle\\": ""
+            "CoreShop\\Payum\\UnzerBundle\\": "src/"
         }
     },
+    "autoload-dev": {
+        "classmap": [
+            "Kernel.php"
+        ],
+        "psr-4": {
+            "Pimcore\\Model\\DataObject\\": "var/classes/DataObject"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "extra": {
-        "branch-alias": {
-            "dev-master": "2.0-dev",
-            "dev-develop": "2.0-dev"
-        },
         "pimcore": {
             "bundles": [
                 "CoreShop\\Payum\\UnzerBundle\\UnzerBundle"

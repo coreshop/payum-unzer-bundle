@@ -1,4 +1,0 @@
-core_shop_payment:
-    pimcore_admin:
-        js:
-            unzer: /bundles/unzer/pimcore/js/unzer.js
