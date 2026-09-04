@@ -18,15 +18,12 @@ declare(strict_types=1);
 
 namespace CoreShop\Payum\UnzerBundle;
 
-use CoreShop\Bundle\EnterpriseSubscriptionBundle\CoreShopEnterpriseSubscriptionBundle;
 use Pimcore\Extension\Bundle\AbstractPimcoreBundle;
 use Pimcore\Extension\Bundle\PimcoreBundleAdminClassicInterface;
 use Pimcore\Extension\Bundle\Traits\BundleAdminClassicTrait;
 use Pimcore\Extension\Bundle\Traits\PackageVersionTrait;
-use Pimcore\HttpKernel\Bundle\DependentBundleInterface;
-use Pimcore\HttpKernel\BundleCollection\BundleCollection;
 
-class UnzerBundle extends AbstractPimcoreBundle implements DependentBundleInterface, PimcoreBundleAdminClassicInterface
+class UnzerBundle extends AbstractPimcoreBundle implements PimcoreBundleAdminClassicInterface
 {
     use BundleAdminClassicTrait;
     use PackageVersionTrait;
@@ -44,11 +41,6 @@ class UnzerBundle extends AbstractPimcoreBundle implements DependentBundleInterf
     protected function getComposerPackageName(): string
     {
         return 'coreshop/payum-unzer-bundle';
-    }
-
-    public static function registerDependentBundles(BundleCollection $collection): void
-    {
-        $collection->addBundle(new CoreShopEnterpriseSubscriptionBundle());
     }
 
     /**
