@@ -23,7 +23,6 @@
     "require": {
         "php": "^8.3",
         "coreshop/core-shop": "^5.1",
-        "coreshop/enterprise-subscription-bundle": "^2025.1",
         "coreshop/payum-unzer": "3.x-dev"
     },
     "require-dev": {
