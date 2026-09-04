@@ -1,0 +1,7 @@
+unzer_payment_type: 'Payment type'
+unzer_payment_type_card: 'Credit / debit card'
+unzer_payment_type_paypal: 'PayPal'
+unzer_payment_type_sofort: 'Sofort (deprecated by Unzer)'
+unzer_public_key: 'Public key'
+unzer_private_key: 'Private key'
+unzer_sandbox_mode: 'Sandbox mode'
