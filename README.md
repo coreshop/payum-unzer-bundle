@@ -7,23 +7,11 @@ Unzer (formerly heidelpay) as a CoreShop payment provider, built on `coreshop/pa
 | `3.x` | 5.1 | 12 | 8.3, 8.4 | classic admin (ExtJS) and Pimcore Studio |
 | `2026.x` | 2026.x | 2026 | 8.4, 8.5 | Pimcore Studio |
 
-Requires a CoreShop enterprise subscription: `coreshop/enterprise-subscription-bundle` is installed automatically and `CORESHOP_ENTERPRISE_TOKEN` must be configured (see [enterprise-subscription-bundle](https://github.com/coreshop/enterprise-subscription-bundle)).
-
 ## Installation
 
 ```bash
 composer require coreshop/payum-unzer-bundle:"^2026.1"
 bin/console pimcore:bundle:enable UnzerBundle
-```
-
-The package is delivered through the CoreShop Private Packagist repository; add it to your `composer.json` and your token to `auth.json`:
-
-```json
-{
-    "repositories": [
-        { "type": "composer", "url": "https://cors.repo.packagist.com/<your-customer-name>/" }
-    ]
-}
 ```
 
 ## Configuration
